@@ -166,6 +166,7 @@ class Rectangle:
 class Unistroke:
     def __init__(self, name, points):
         self.name = name
+        self.points_original = points
         self.points = Resample(points, NumPoints)
         radians = IndicativeAngle(self.points) 
         self.points = RotateBy(self.points, -radians)
